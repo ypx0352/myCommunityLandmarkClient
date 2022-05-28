@@ -39,12 +39,6 @@ const LogoImage = styled.img`
   width: 30%;
 `;
 
-const LogoText = styled.div`
-  font-weight: bold;
-  font-style: 19px;
-  color: #a4a6b3;
-`;
-
 const Title = styled.h1`
   font-style: 24px;
   font-weight: bold;

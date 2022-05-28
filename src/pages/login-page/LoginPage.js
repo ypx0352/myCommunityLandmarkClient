@@ -40,12 +40,6 @@ const LogoImage = styled.img`
   width: 30%;
 `;
 
-const LogoText = styled.div`
-  font-weight: bold;
-  font-style: 19px;
-  color: #a4a6b3;
-`;
-
 const Title = styled.h1`
   font-style: 24px;
   font-weight: bold;
@@ -88,23 +82,6 @@ const Input = styled.input`
   }
 `;
 
-const ForgotPassword = styled.span`
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 12px;
-  font-weight: bold;
-  color: #9fa2b4;
-`;
-
-const ShowPassword = styled.span`
-  position: absolute;
-  right: 3%;
-  bottom: 10%;
-  color: #9fa2b4;
-  cursor: pointer;
-`;
-
 const Button = styled.button`
   width: 312px;
   padding: 15px;
@@ -127,14 +104,6 @@ const Link = styled.a`
   color: #3751ff;
   font-weight: bold;
   text-decoration: none;
-`;
-
-const Warning = styled.small`
-  color: darkred;
-  margin-top: 2px;
-  &.hide {
-    visibility: hidden;
-  }
 `;
 
 const LoginPage = (props) => {
