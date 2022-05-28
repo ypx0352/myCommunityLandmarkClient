@@ -1,0 +1,28 @@
+Technical Challenge Option 1 (front-end techniques) 
+
+1. Brief description
+
+You have to create a simple mobile friendly web-application – working title: “My Community Landmark” - that allows users to save location based notes on a map. These notes can be
+displayed on the map where they were saved and viewed by the user that created the note as well as other users of the application. The application must demonstrate the functionality captured in the following user stories:
+ 
+1. As a user (of the application) I can see my current location on a map
+2. As a user I can save a short note at my current location
+3. As a user I can see notes that I have saved at the location they were saved
+on the map
+4. As a user I can see the location, text, and user-name of notes other users
+have saved
+5. As a user I have the ability to search for a note based on contained text or
+user-name
+Your application does not need to be pretty (i.e. artist designed) but you should
+aim to make it as functional and usable as possible within the given constraints.
+ 
+2. Technology Stack
+
+The Single-Page Application (SPA) , leveraging ReactJS front-end frameworks to deliver the user interface. You are encouraged to leverage appropriate CSS to ensure that the application delivers a pleasant (if not professionally designed) user experience. The application should
+demonstrate responsive design , and function as expected on both desktop and
+mobile phone.  We suggest to use C#  for back end development or even better to use Mocks.
+3. Results
+
+You must deploy your solution to any free hosting service provided by one of the providers ( MS Azure, AWS, GitHub etc..)
+Your solution must be accessible via http link. 
+You have 4 working days to present your results after receiving this email.
