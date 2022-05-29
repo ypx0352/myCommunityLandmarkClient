@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import * as actionCreators from "../../../store/actionCreators";
-import * as actionTypes from "../../../store/actionTypes";
-import { fromJS } from "immutable";
 
 const UserContainer = styled.div`
   display: flex;
@@ -30,12 +28,7 @@ const StyledButton = styled.button`
 `;
 
 const User = (props) => {
-  const { loggedUsername, handleLogOut, handleSetLoggedUsername } = props;
-  const username = localStorage.getItem("username");
-
-  useEffect(() => {
-    handleSetLoggedUsername(username);
-  }, [username]);
+  const { loggedUsername, handleLogOut } = props;
 
   return (
     <UserContainer>
@@ -66,13 +59,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   handleLogOut() {
     dispatch(actionCreators.logoutAction);
-  },
-
-  handleSetLoggedUsername(username) {
-    dispatch({
-      type: actionTypes.SET_LOGGED_USERNAME,
-      value: fromJS(username),
-    });
   },
 });
 export default connect(mapStateToProps, mapDispatchToProps)(User);
