@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { fromJS } from "immutable";
 import * as actionCreators from "../../../store/actionCreators";
+import * as actionTypes from "../../../store/actionTypes";
 
 const UserContainer = styled.div`
   display: flex;
@@ -10,6 +12,7 @@ const UserContainer = styled.div`
   align-items: baseline;
   min-width: 300px;
 `;
+
 const StyledButton = styled.button`
   width: ${(props) => props.theme.size.buttonWidth};
   height: ${(props) => props.theme.size.buttonHeight};
@@ -28,7 +31,14 @@ const StyledButton = styled.button`
 `;
 
 const User = (props) => {
-  const { loggedUsername, handleLogOut } = props;
+  const { loggedUsername, handleLogOut, setLoggedUsername } = props;
+  const usernameInLocalStorage = localStorage.getItem("username");
+
+  useEffect(() => {
+    if (usernameInLocalStorage !== null) {
+      setLoggedUsername(usernameInLocalStorage);
+    }
+  });
 
   return (
     <UserContainer>
@@ -59,6 +69,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   handleLogOut() {
     dispatch(actionCreators.logoutAction);
+  },
+
+  setLoggedUsername(value) {
+    dispatch({ type: actionTypes.SET_LOGGED_USERNAME, value: fromJS(value) });
   },
 });
 export default connect(mapStateToProps, mapDispatchToProps)(User);
