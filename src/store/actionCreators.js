@@ -3,7 +3,7 @@ import axios from "axios";
 import { fromJS } from "immutable";
 import * as actionTypes from "../store/actionTypes";
 
-const serverBaseUrl = process.env.REACT_APP_.SERVER_URL;
+const serverBaseUrl = process.env.SERVER_URL;
 
 export const createPlaceAction = (
   loggedUsername,

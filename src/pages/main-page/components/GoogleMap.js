@@ -33,7 +33,7 @@ const GoogleMapComponent = (props) => {
   const [currentLocationFetched, setCurrentLocationFetched] = useState(false);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_.GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
 
   useEffect(() => {
